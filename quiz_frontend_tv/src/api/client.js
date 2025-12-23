@@ -3,7 +3,7 @@
 // API client for the quiz frontend. Uses REACT_APP_API_BASE_URL env var.
 // Provides simple wrappers and placeholder endpoints to be implemented on backend.
 //
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3001';
 
 /**
  * Build full URL for API call ensuring no double slashes.
