@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders timers and control panel', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByLabelText(/per-question timer/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/full-quiz timer/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/control panel/i)).toBeInTheDocument();
 });
